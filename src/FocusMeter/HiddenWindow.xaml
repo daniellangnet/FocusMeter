@@ -4,7 +4,7 @@
         xmlns:tb="http://www.hardcodet.net/taskbar" 
         Title="HiddenWindow" Height="350" Width="525" Visibility="Hidden">
     <Grid>
-        <tb:TaskbarIcon x:Name="NotifyIcon" IconSource="/icons/notworking.ico">
+        <tb:TaskbarIcon x:Name="NotifyIcon" IconSource="/Assets/Icons/notworking.ico">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Track distraction! (Ctrl + Enter)" Name="menuTrackDistraction" Click="menuTrackDistraction_Click" />

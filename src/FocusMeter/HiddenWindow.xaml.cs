@@ -38,9 +38,9 @@ namespace FocusMeter
 
         private void LoadIcons()
         {
-            notWorkingIcon = LoadIconFromResource("pack://application:,,,/FocusMeter;component/icons/notworking.ico");
-            productiveIcon = LoadIconFromResource("pack://application:,,,/FocusMeter;component/icons/productive.ico");
-            distractedIcon = LoadIconFromResource("pack://application:,,,/FocusMeter;component/icons/distracted.ico");
+            notWorkingIcon = LoadIconFromResource("pack://application:,,,/FocusMeter;component/Assets/Icons/notworking.ico");
+            productiveIcon = LoadIconFromResource("pack://application:,,,/FocusMeter;component/Assets/Icons/productive.ico");
+            distractedIcon = LoadIconFromResource("pack://application:,,,/FocusMeter;component/Assets/Icons/distracted.ico");
         }
 
         private static Icon LoadIconFromResource(string uri)

@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Icons\appicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto">
@@ -158,12 +158,12 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="appicon.ico" />
+    <Resource Include="Assets\Icons\appicon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\distracted.ico" />
-    <Resource Include="icons\notworking.ico" />
-    <Resource Include="icons\productive.ico" />
+    <Resource Include="Assets\Icons\distracted.ico" />
+    <Resource Include="Assets\Icons\notworking.ico" />
+    <Resource Include="Assets\Icons\productive.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
