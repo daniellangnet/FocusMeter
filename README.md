@@ -5,7 +5,7 @@ Its purpose is to provide a fast and easy way to switch between __being producti
 It stores the data inside an embedded RavenDB database. As of now, there is no UI for displaying reports and statistics on that data. In the future, we might have a way to export tabular data to excel or sql server to do those kind of statistics because ultimately, that's the whole reason why we have this app in the first place. However, let's track some days/weeks of work first.
 
 ###Gettting started
-Clone the repository to your local machine and run _build.bat_. After it has finished you should find a zip archive _focusmeter.zip_ in your _release_ folder. This archive contains the binaries you need to run the application.
+Clone the repository to your local machine and run _build.bat_. After it has finished you should find a zip archive _focusmeter.zip_ in your _deploy_ folder. This archive contains the binaries you need to run the application.
 You probably want to put to move these files to a permanenet location like _C:\FocusMeter\_ and add the file _FocusMeter.exe_ to your autostart...
 
 Once the application is running, you will find a small round icon in your system tray. Its color tells you which state it is in:
