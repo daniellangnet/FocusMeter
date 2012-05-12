@@ -1,4 +1,4 @@
-﻿namespace FocusMeter
+﻿namespace FocusMeter.Model
 {
     public enum TimerState
     {

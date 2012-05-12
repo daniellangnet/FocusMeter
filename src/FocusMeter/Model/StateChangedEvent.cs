@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FocusMeter
+namespace FocusMeter.Model
 {
     public class StateChangedEvent
     {

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using FocusMeter;
+using FocusMeter.Infrastructure;
+using FocusMeter.Model;
 using Application = System.Windows.Application;
 
 namespace FocusMeter

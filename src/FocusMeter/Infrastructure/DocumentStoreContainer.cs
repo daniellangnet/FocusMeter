@@ -2,7 +2,7 @@
 using System.Net;
 using Raven.Client.Embedded;
 
-namespace FocusMeter
+namespace FocusMeter.Infrastructure
 {
     public class DocumentStoreContainer
     {

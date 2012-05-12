@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
+using FocusMeter.Model;
 using Raven.Client;
 using Raven.Client.Embedded;
 using Raven.Database.Server;

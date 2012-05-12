@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace FocusMeter
+namespace FocusMeter.Infrastructure
 {
     public sealed class KeyboardHook : IDisposable
     {

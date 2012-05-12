@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
+using FocusMeter.Infrastructure;
 
-namespace FocusMeter
+namespace FocusMeter.Model
 {
     public class Configuration
     {

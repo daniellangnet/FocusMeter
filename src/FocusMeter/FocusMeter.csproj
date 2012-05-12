@@ -112,11 +112,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Configuration.cs" />
-    <Compile Include="DocumentStoreContainer.cs" />
-    <Compile Include="StateChangedEvent.cs" />
+    <Compile Include="Model\Configuration.cs" />
+    <Compile Include="Infrastructure\DocumentStoreContainer.cs" />
+    <Compile Include="Model\StateChangedEvent.cs" />
     <Compile Include="StateManager.cs" />
-    <Compile Include="TimerState.cs" />
+    <Compile Include="Model\TimerState.cs" />
     <Page Include="HiddenWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -125,7 +125,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="KeyboardHook.cs" />
+    <Compile Include="Infrastructure\KeyboardHook.cs" />
     <Compile Include="HiddenWindow.xaml.cs">
       <DependentUpon>HiddenWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

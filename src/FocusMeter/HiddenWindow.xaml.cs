@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Windows;
 using System.Windows.Forms;
+using FocusMeter.Infrastructure;
+using FocusMeter.Model;
 using Application = System.Windows.Application;
 using MessageBox = System.Windows.Forms.MessageBox;
 
