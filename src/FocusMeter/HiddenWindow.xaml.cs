@@ -22,10 +22,9 @@ namespace FocusMeter
             
             LoadIcons();
 
-            if (!App.StateManager.CanShowDatabase)
+            if (!DocumentStoreContainer.CanShowDatabase)
             {
-                MessageBox.Show("You need to run FocusMeter as Administrator if you want to show the embedded RavenDB database." +
-                                Environment.NewLine + Environment.NewLine +
+                MessageBox.Show("You need to run FocusMeter as Administrator if you want to show the embedded RavenDB database.\r\n\r\n" +
                                 "(This is because RavenDB Management Studio is hosted by an embedded http server that needs to listen to an http port.)",
                                 "Administrator privileges", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 menuShowDatabase.IsEnabled = false;
@@ -83,7 +82,7 @@ namespace FocusMeter
         
         private void menuShowDatabase_Click(object sender, RoutedEventArgs e)
         {
-            App.StateManager.ShowDatabase();
+            DocumentStoreContainer.ShowDatabase();
         }
 
         private void menuTrackDistraction_Click(object sender, RoutedEventArgs e)

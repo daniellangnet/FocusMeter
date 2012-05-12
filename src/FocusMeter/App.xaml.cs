@@ -16,7 +16,9 @@ namespace FocusMeter
         
         public App()
         {
-            StateManager = new StateManager(TimerState.NotWorking);
+            DocumentStoreContainer.Initialize();
+
+            StateManager = new StateManager(DocumentStoreContainer.DocumentStore, TimerState.NotWorking);
 
             RegisterKeyboardShortcuts();
         }

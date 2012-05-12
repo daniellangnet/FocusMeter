@@ -112,6 +112,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DocumentStoreContainer.cs" />
     <Compile Include="StateChangedEvent.cs" />
     <Compile Include="StateManager.cs" />
     <Compile Include="TimerState.cs" />
