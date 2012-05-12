@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net;
 using Raven.Client.Embedded;
+using Raven.Database.Server;
 
 namespace FocusMeter
 {
@@ -12,16 +14,32 @@ namespace FocusMeter
 
         public Action<TimerState> StateChanged { get; set; }
 
+        public bool CanShowDatabase { get; private set; }
+
         public StateManager(TimerState initialState)
         {
             CurrentState = initialState;
-
+            
             DocumentStore = new EmbeddableDocumentStore
             {
                 DataDirectory = "Data",
                 UseEmbeddedHttpServer = true
             };
-            DocumentStore.Initialize();
+
+            try
+            {
+                DocumentStore.Initialize();
+                CanShowDatabase = true;
+            }
+            catch (HttpListenerException)
+            {
+                DocumentStore = new EmbeddableDocumentStore
+                {
+                    DataDirectory = "Data"
+                };
+                DocumentStore.Initialize();
+                CanShowDatabase = false;
+            }
         }
         
         public void ChangeState(TimerState state)
