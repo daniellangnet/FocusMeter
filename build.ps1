@@ -1,8 +1,8 @@
 properties {
     $base_dir = resolve-path .\
-    $build_artifacts_dir = "$base_dir\build"
-    $tools_dir = "$base_dir\tools"
-    $deploy_dir = "$base_dir\deploy"
+    $build_artifacts_dir = "$base_dir\build\"
+    $tools_dir = "$base_dir\tools\"
+    $deploy_dir = "$base_dir\deploy\"
     $global:config = "Debug"
 }
 
