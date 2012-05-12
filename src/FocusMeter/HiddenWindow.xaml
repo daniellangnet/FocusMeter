@@ -7,7 +7,7 @@
         <tb:TaskbarIcon x:Name="NotifyIcon" IconSource="/Assets/Icons/notworking.ico">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Track distraction! (Ctrl + Enter)" Name="menuTrackDistraction" Click="menuTrackDistraction_Click" />
+                    <MenuItem Header="Track distraction! (use keyboard shortcut)" Name="menuTrackDistraction" Click="menuTrackDistraction_Click" />
                     <MenuItem Header="Be productive again... (Ctrl + Enter)" Name="menuContinueProductive" Click="menuContinueProductive_Click" />
                     <MenuItem Header="Start working" Name="menuStart" Click="menuStart_Click" />
                     <MenuItem Header="Stop working"  Name="menuStop" Click="menuStop_Click" />                    
