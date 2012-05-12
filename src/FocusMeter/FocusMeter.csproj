@@ -112,7 +112,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Constants.cs" />
     <Compile Include="Helper\FlagEnumExtensions.cs" />
+    <Compile Include="Infrastructure\DocumentStoreExtensions.cs" />
     <Compile Include="Model\Configuration.cs" />
     <Compile Include="Infrastructure\DocumentStoreContainer.cs" />
     <Compile Include="Model\StateChangedEvent.cs" />

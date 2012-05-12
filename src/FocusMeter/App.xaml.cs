@@ -12,7 +12,7 @@ namespace FocusMeter
     /// </summary>
     public partial class App : Application
     {
-        private KeyboardHook hook;
+        private static KeyboardHook hook;
 
         public static StateManager StateManager { get; set; }
         
@@ -22,14 +22,30 @@ namespace FocusMeter
 
             StateManager = new StateManager(DocumentStoreContainer.DocumentStore, TimerState.NotWorking);
 
-            RegisterKeyboardShortcuts();
+            var configuration = DocumentStoreContainer.DocumentStore.LoadConfiguration();
+            if (configuration == null)
+            {
+                configuration = new Configuration
+                {
+                    ShortcutKey = Keys.Enter,
+                    ShortcutModifierKeys = ModifierKeys.Control
+                };
+                DocumentStoreContainer.DocumentStore.SaveOrUpdateConfiguration(configuration);
+            }
+            RegisterKeyboardShortcuts(configuration);
         }
 
-        private void RegisterKeyboardShortcuts()
+        public static void RegisterKeyboardShortcuts(Configuration configuration)
         {
-            hook = new KeyboardHook();
+            if (hook != null)
+            {
+                // don't rely on the gc here because the shortcut will stay active until cleanup
+                hook.Dispose();
+                hook = null;
+            }
 
-            hook.RegisterHotKey(ModifierKeys.Control, Keys.Enter);
+            hook = new KeyboardHook();
+            hook.RegisterHotKey(configuration.ShortcutModifierKeys, configuration.ShortcutKey);
             hook.KeyPressed += (sender, args) => StateManager.ToggleDistraction();
         }
     }

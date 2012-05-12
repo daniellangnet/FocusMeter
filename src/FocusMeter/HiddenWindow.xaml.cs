@@ -116,18 +116,14 @@ namespace FocusMeter
 
         private void menuOptions_Click(object sender, RoutedEventArgs e)
         {
-            var optionsWindow = new OptionsWindow
-            {
-                Configuration = new Configuration
-                {
-                    ShortcutKey = Keys.Enter,
-                    ShortcutModifierKeys = ModifierKeys.Control | ModifierKeys.Alt
-                }
-            };
+            var optionsWindow = new OptionsWindow { Configuration = DocumentStoreContainer.DocumentStore.LoadConfiguration() };
 
             if (optionsWindow.ShowDialog() == true)
             {
-                
+                var configuration = optionsWindow.Configuration;
+
+                DocumentStoreContainer.DocumentStore.SaveOrUpdateConfiguration(configuration);
+                App.RegisterKeyboardShortcuts(configuration);
             }
         }
     }
