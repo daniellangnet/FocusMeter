@@ -113,5 +113,22 @@ namespace FocusMeter
             NotifyIcon.Dispose();
             Close();
         }
+
+        private void menuOptions_Click(object sender, RoutedEventArgs e)
+        {
+            var optionsWindow = new OptionsWindow
+            {
+                Configuration = new Configuration
+                {
+                    ShortcutKey = Keys.Enter,
+                    ShortcutModifierKeys = ModifierKeys.Control | ModifierKeys.Alt
+                }
+            };
+
+            if (optionsWindow.ShowDialog() == true)
+            {
+                
+            }
+        }
     }
 }

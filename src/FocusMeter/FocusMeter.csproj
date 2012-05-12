@@ -112,9 +112,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\FlagEnumExtensions.cs" />
     <Compile Include="Model\Configuration.cs" />
     <Compile Include="Infrastructure\DocumentStoreContainer.cs" />
     <Compile Include="Model\StateChangedEvent.cs" />
+    <Compile Include="ViewModels\OptionsViewModel.cs" />
+    <Compile Include="OptionsWindow.xaml.cs">
+      <DependentUpon>OptionsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StateManager.cs" />
     <Compile Include="Model\TimerState.cs" />
     <Page Include="HiddenWindow.xaml">
@@ -130,6 +135,10 @@
       <DependentUpon>HiddenWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OptionsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

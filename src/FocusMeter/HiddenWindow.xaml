@@ -12,6 +12,8 @@
                     <MenuItem Header="Start working" Name="menuStart" Click="menuStart_Click" />
                     <MenuItem Header="Stop working"  Name="menuStop" Click="menuStop_Click" />                    
                     <Separator />
+                    <MenuItem Header="Options" Name="menuOptions" Click="menuOptions_Click" />
+                    <Separator />
                     <MenuItem Name ="menuShowDatabase" Header="Show RavenDB database" Click="menuShowDatabase_Click"/>
                     <MenuItem Name ="menuExit" Header="Exit program" Click="menuExitProgram_Click" />
                 </ContextMenu>
