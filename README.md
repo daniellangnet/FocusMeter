@@ -1,0 +1,4 @@
+*FocusMeter* is a small tool sitting in the system bar that lets you track productive vs. distracted time while working.
+Its purpose is to provide a fast and easy way to switch between _being productive_ and _being distracted_.
+
+It stores the data inside an embedded RavenDB database. As of now, there is no UI for displaying reports and statistics on that data. In the future, we might have a way to export tabular data to excel or sql server to do those kind of statistics because ultimately, that's the whole reason why we have this app in the first place. However, let's track some days/weeks of work first.
